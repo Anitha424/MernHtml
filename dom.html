@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<h1>>, initial-scale=1.0">
+    <title>stone paper scissor</title>
+    <style>
+        body{
+            font-family: 'Times New Roman', Times, serif;
+            background-color: pink;
+            
+            margin: 0;
+            padding: 20px;
+            
+        }
+        .game{
+            background-color: rgb(176, 82, 113);
+            padding:20px;
+            border-radius: 50px;
+            width: 500px;
+            box-shadow: rgb(62, 1, 1);
+        }
+         
+    </style>
+</head>
+<body>
+    <center>
+        <div class="game">
+    <h1>STONE🪨 PAPER🗞️ SCISSOR✂️</h1>
+    <H3>"Stone beats scissors, paper beats stone--play smart,play bold"</H3>
+    </div>
+    </center>
+    <hr>
+    <div class="button">
+        <center>
+    <h3>Choose your choice</h3>
+    <button onclick="play('stone')" >STONE🪨</button><br>
+    
+    <button onclick="play('paper')">PAPER🗞️</button><br>
+    <button onclick="play('scissor')">SCISSOR✂️</button><br>
+    </div>
+    <center>
+    <div id="result">Result:</div>
+    </center>
+        <script>
+            function play(player){
+            const choices=['stone','paper','scissor'];
+            let computer=choices[Math.floor(Math.random()*3)];
+            let result='';
+            if(player===computer){
+                result="It's a tie";
+            }
+            else if((player==='stone' && computer=='scissor') || (player==='paper' && computer=='stone') || (player==='scissor' && computer=='paper')){
+                result='You win!';
+            }
+            else{
+                result='You lose!';
+
+            }
+            document.getElementById("result").innerHTML=`You chose ${player}. Computer chose ${computer}. ${result}`;
+        }
+        </script>
+        </center>
+        <hr>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur eligendi recusandae perspiciatis. Necessitatibus alias voluptas, voluptatum, quod nam nulla corporis nihil quisquam assumenda aliquid atque consectetur suscipit id et corrupti. Explicabo, a recusandae, vero voluptatibus dignissimos assumenda nemo cupiditate libero delectus magni quasi sapiente repellendus dicta exercitationem iure id reiciendis! Inventore odio quas corporis mollitia ipsa labore architecto, enim ab sapiente sit vel? Numquam nam accusamus quis atque, repudiandae sed minima quos odio consectetur esse, mollitia, ducimus vero soluta debitis illum fugit! Asperiores, impedit vitae harum quidem voluptatum dolorem optio provident esse velit, quis, quibusdam nostrum. Nulla quas nihil dicta ullam veniam fugit quibusdam placeat doloremque sit. Laborum non ad quo quia? Culpa incidunt quis magni aliquam distinctio iure magnam ex ut enim! Aliquid voluptatibus labore amet corporis facilis aperiam! Dignissimos quam laboriosam odio dolore quibusdam ullam in, cumque ipsa ut? Laudantium natus ab tempora maiores, repudiandae mollitia ipsum doloremque, quis fugit labore temporibus aliquam deserunt dignissimos consequuntur nulla, quidem veritatis nesciunt maxime ipsa? Nihil iste recusandae quas, dolores cupiditate qui suscipit similique dolor excepturi ipsam blanditiis porro sit adipisci facilis impedit est, veniam doloremque quaerat, sunt iure. Cumque nisi impedit saepe sint ipsum officiis dolorem nam dolores itaque vero.</p>
+
+
+    </div>
+    
+
+
+
+</body>
+</html>

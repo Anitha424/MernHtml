@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <table>
+        <style>
+        table, th, td {
+            
+            
+            border-style: outset;
+            border-color:purple;
+            th,td{}background-color:plum;
+            border-collapse: collapse;
+            width: 100%;
+            } 
+            th,td{
+            padding: 15px;
+                text-align: center;
+                border-bottom: 20px;
+            
+        }
+            tr:hover {background-color: #f5f5f5;}
+    </style>
+    </table>
+    
+   
+<head>
+    
+    
+</head>
+<body>
+    <table style="width: 100%;"></table>
+    <colgroup>
+    <col span="2" style="background-color: aqua;"></colgroup>
+   
+    <h1>This is simple table creation</h1>
+    <table style width:800%>
+        
+        <caption>Student details</caption>
+        <tr>
+            <th style="width: 30px;">name</th>
+            <th>department</th>
+            <th>course</th>
+        </tr>
+        <tr style="height:2px;">
+            <td>anitha</td>
+            <td>ece</td>
+            <td>mern</td>
+        </tr>
+        <tr>
+            <td>ishu</td>
+            <td>ece</td>
+            <td>python</td>
+        </tr>
+        <tr>
+            <td>nithya</td>
+            <td>cse</td>
+            <td>java</td>
+        </tr>
+    </table>
+    <p>Here it looks like table content</p>
+</body>
+</html>
+ <div id="result">Result</div>
+        <script>
+            function game(player){
+            const choices=['rock','paper','scissor'];
+            let computer=choices[Math.floor(Math.random()*3)];
+            let result='';
+            if(player===computer){
+                result="It's a tie";
+            }
+            else if((player==='rock' && computer=='scissor') || (player==='paper' && computer=='rock') || (player==='scissor' && computer=='paper')){
+                result='You win!';
+            }
+            else{
+                result='You lose!';
+
+            }
+            document.getElementById("result").innerHTML=`You chose ${player}. Computer chose ${computer}. ${result}`;
+        }
